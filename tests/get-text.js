@@ -1,0 +1,17 @@
+const puppeteer = require('puppeteer');
+
+(async () => { // IIFE (Immediately invoked Functional Expression)
+    const browser = await puppeteer.launch({
+        "headless": false
+    });
+    const page = await browser.newPage();
+
+    await page.goto("https://www.google.com");
+
+    const text = await page.$eval('#SIvCob', element => element.textContent);
+
+    console.log('Text content: ' + text);
+
+    await browser.close();
+
+})();
