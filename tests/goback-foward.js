@@ -4,6 +4,7 @@ const puppeteer = require('puppeteer');
     const browser = await puppeteer.launch({
         "headless": false
     });
+
     const page = await browser.newPage();
 
     await page.goto("https://www.google.com");
@@ -20,7 +21,7 @@ const puppeteer = require('puppeteer');
 
     await page.goForward();
 
-    await page.waitForSelector('#top-bar'); 
+    await page.waitForSelector('#top-bar');
 
     await browser.close();
 

@@ -4,8 +4,11 @@ const puppeteer = require('puppeteer');
     const browser = await puppeteer.launch({
         "headless": false
     });
+
     const page = await browser.newPage();
+
     await page.setDefaultTimeout(10000);
+
     await page.setDefaultNavigationTimeout(20000);
 
     await page.goto("https://www.google.com");

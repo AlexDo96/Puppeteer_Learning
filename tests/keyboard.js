@@ -4,15 +4,18 @@ const puppeteer = require('puppeteer');
     const browser = await puppeteer.launch({
         "headless": false
     });
+
     const page = await browser.newPage();
 
     await page.goto("https://www.google.com");
 
     await page.waitForSelector("input[name='q']");
 
-    await page.type("input[name='q']", "Hello World"); 
+    await page.type("input[name='q']", "Hello World");
 
-    await page.keyboard.press('Enter', {delay: 50});
+    await page.keyboard.press('Enter', {
+        delay: 50
+    });
 
     await page.waitFor(3000); // Wait for 3 seconds
 

@@ -7,6 +7,7 @@ const puppeteer = require('puppeteer');
         "slowMo": 500,
         "devtools": true
     });
+
     const page = await browser.newPage();
 
     await page.goto("https://www.google.com");

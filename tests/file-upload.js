@@ -19,7 +19,7 @@ const puppeteer = require('puppeteer');
     ]);
 
     await fileChooser.accept(['./Automation_requirement.png']);
-    
+
     await browser.close();
 
 })();
