@@ -1,7 +1,7 @@
 const puppeteer = require('puppeteer');
 const expect = require('chai').expect;
 
-describe('Test With Mocha', () => {
+describe('Test With Chai', () => {
     before(async () => {
         browser = await puppeteer.launch({
             "headless": false
